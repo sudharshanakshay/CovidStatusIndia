@@ -1,0 +1,27 @@
+import requests
+import time
+import json
+import sched
+
+s = sched.scheduler(time.time, time.sleep)
+
+def get_data():
+    url = "https://www.mohfw.gov.in/data/datanew.json"
+    r = requests.get(url)
+    print(r.headers['content-type'])
+    return r.json()
+
+
+def new_json_file_name(filetype='json'):
+    t = time.localtime()
+    return str(t.tm_year) + ':' + str(t.tm_mon) + ':' + str(t.tm_mday) + ':' + str(t.tm_hour) \
+           + ':' + str(t.tm_min) + ':' + str(t.tm_sec) + '.' + filetype
+
+
+def write_data():
+    file = open('json/'+new_json_file_name(), 'w')
+    json.dump(get_data(), file, indent=4, sort_keys=False)
+    file.close()
+
+
+write_data()

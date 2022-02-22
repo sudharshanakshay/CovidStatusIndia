@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: CovidStatusIndia
+Version: 0.0.1
+Summary: Covid-19 Data Extractor - India
+Home-page: UNKNOWN
+Author: Sudharshan Akshay
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Extracts Covid-19 status from "url = https://www.mohfw.gov.in/data/datanew.json" 
+Keywords: python,covid-19,covid,status,india,data,extactor,json,sudharshan,akshay
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Alpha
+Classifier: Intended Audience :: Developer
+Classifier: Programing Language :: Python :: 3
+Classifier: Operating System :: Linux :: *
+Classifier: Operating System :: Microsoft :: Windows
